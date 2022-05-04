@@ -1,17 +1,13 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Cart } from "./pages/Cart";
-import Navbar from "./components/Navbar/Navbar"
 
-class App extends Component {
-  render() {
+function App()  {
     return (
-     <div>
-     <Navbar/>
-     </div>
-    );
-  }
+      <div className="App">
+        <Cart  />
+      </div>
+    )
 }
 
 export default App;
+
