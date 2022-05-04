@@ -1,13 +1,15 @@
-import "./App.css";
-import { Cart } from "./pages/Cart";
+import './App.css'
+import Navbar from './components/Navbar/Navbar';
 
-function App()  {
-    return (
-      <div className="App">
-        <Cart  />
-      </div>
-    )
+function App() {
+
+  return (
+    <div className="App">
+      <Navbar />
+
+    
+    </div>
+  )
 }
 
-export default App;
-
+export default App
