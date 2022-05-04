@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
+      <div className="Nav-container">
       
     <nav className="main-nav">
       {/* 1st logo part consisit of Menu*/}
@@ -71,7 +72,13 @@ const Navbar = () => {
         
       </div>
       </nav>
-     
+      <  div class="search-container">
+      <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search"/>
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+      </div>
+      </div>
   );
 };
 
