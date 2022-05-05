@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import { Cart } from './pages/Cart';
 import { Checkout } from "./pages/Checkout";
 
+
 function App() {
   return (
     <div className="App">
@@ -13,9 +14,7 @@ function App() {
       <Routes>
         <Route path="/cart" element={ <Cart /> } />
         <Route path="/checkout" element={ <Checkout /> } />
-
       </Routes>
-      
        
     </div>  
   )
