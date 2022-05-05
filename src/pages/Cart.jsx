@@ -47,7 +47,7 @@ export const Cart = () => {
     };
 
     const handleCheckoutCart = () => {
-        navigate("/checkout");
+        navigate("/cart/address");
     };
 
     const handleContinueShopping = () => {
@@ -65,7 +65,7 @@ export const Cart = () => {
             <div className={ styles.header }>
                 <div className={ styles.headerDivs }>
                     <h1>SHOPPING BAG</h1>
-                    <div onclick={ handleContinueShopping }>Continue Shopping</div>
+                    <div onClick={ handleContinueShopping }>Continue Shopping</div>
                 </div>
             </div>
 
@@ -78,14 +78,14 @@ export const Cart = () => {
                                     <img src={ data.img } alt="" />
                                 </div>
                                 <div className={ styles.titleDesc }>
-                                    <h2 className={ styles }>{ data.brand }</h2>
+                                    <h3 className={ styles }>{ data.brand }</h3>
                                     <div className={ styles }>{ data.title }</div>
                                     <div className={ styles }>{ `FARFETCH ID: ${data.id}` }</div>
                                     <div>Exclusive</div>
                                 </div>
 
                                 <div>
-                                    <h2 className={ styles }>$ { data.price }</h2>
+                                    <h3 className={ styles }>$ { data.price }</h3>
                                     <div>(Import duties included)</div>
                                 </div>
                                 <div>
@@ -121,7 +121,7 @@ export const Cart = () => {
                     }) }
                 </div>
                 <div className={ styles.Summary }>
-                    <h2>Summary</h2>
+                    <h3>Summary</h3>
                     <div className={ styles.pymtDiv }>
                         <p>subtotal</p>
                         <p>{ `$1,077.00` }</p>
