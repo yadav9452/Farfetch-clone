@@ -18,7 +18,7 @@ export const Cart = () => {
        
         }
   return (
-    <div>
+    <div className='cart-container'>
         <h1>SHOPPING BAG</h1>
           <div>
               <div>

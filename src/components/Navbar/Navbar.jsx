@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { CgProfile} from "react-icons/cg";
 import { AiOutlineHeart } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
 const Navbar = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
