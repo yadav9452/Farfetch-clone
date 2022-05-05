@@ -1,8 +1,4 @@
 /* mainpage */
-.cart {
-    width: 70%;
-    margin: auto;
-}
 
 /* offer */
 .offer {
@@ -11,6 +7,21 @@
     font-size: 12px;
     border-bottom: 1px solid rgb(228, 228, 228);
 }
+.header{
+    width: 58%;
+    margin: 2% auto;
+    font-size: 20px; 
+    text-align: right;
+    /* border: 2px solid black;      */
+}
+.headerDivs{
+    /* width: 50%; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: row;
+}
+
 
 /* heading */
 .heading {
@@ -28,44 +39,78 @@
     width: 10%;
 }
 
-.cartprod {
-    width: 35%;
+.cartProd {
     display: flex;
-    flex-direction: row;
-    column-gap: 10px;
+    width: 140%;
+    justify-content: space-between;
+    text-align: left;
+    border-top: 1px solid silver;
+    padding: 10px ;
+
+   
 }
 
-.cartdata {
-    display: flex;
-    width: 10%;
-    flex-direction: row;
-    margin-top: 60px;
-    font-size: 15px;
-}
+
+
 .imageDiv{
-    border: 1px solid red;
+width: 120px;
+height: 160px;
+align-items: center;
 }
+
 .imageDiv>img {
-    /* border: 1px solid black; */
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    /* height: 100%;     */
 }
 
-.cartdata>select {
-    height: 18px;
+
+.titleDesc{
+    padding: 10px;
+    /* font-size: 20px; */
 }
 
-.delbtn {
-    margin-left: 50%;
+
+.delBtn{
+    font-size: 30px;
 }
 
-.delbtn>button {
-    font-size: 15px;
+.cartContainer{
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Summary{
+    width: 20%;  
+        text-align: left;
+    
+}
+.pymtDiv{
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    margin: 10px 0;
+    /* margin-right: 30px; */
+}
+.wishlist{
+    align-items: center;
+    color: black;
+}
+.checkoutBtn{
+    width:  100%;
+    font-size: 1rem;
     border: none;
-    background-color: white;
-    color: #ed7745;
+    color: white;
+    background-color: black;
+padding: 5px;    
 }
+.checkoutBtn:hover{
+    background-color: #595959;
 
-
-
-
+}
+.quantity>select{
+    width: 40%;
+    font-size: 17px;
+    text-align: center;
+}
