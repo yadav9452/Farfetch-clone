@@ -6,9 +6,9 @@ import { Cart } from './pages/Cart';
 import { Checkout } from "./pages/Checkout";
 
 function App() {
-
   return (
     <div className="App">
+
       {/* <Navbar /> */}
       <Routes>
         <Route path="/cart" element={ <Cart /> } />
@@ -19,6 +19,7 @@ function App() {
        
     </div>  
   )
+
 }
 
-export default App
+export default App;
