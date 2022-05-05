@@ -266,15 +266,18 @@ li {
 
 .search-container {
   float: right;
+  /* border: 1px solid red; */
 }
 
 .search-container button {
   float: right;
   padding: 6px 10px;
-  margin-top: 8px;
+  /* margin-top: 8px; */
   margin-right: 16px;
   background: #ddd;
   font-size: 17px;
   border: none;
   cursor: pointer;
+  height: 20px;
 }
+
