@@ -1,21 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Jost", sans-serif;
-}
+} */
 
-html {
-  font-size: 62.5%;
-}
 
-a {
+
+.menu-link a {
   text-decoration: none;
 }
 
-li {
+.menu-link li {
   list-style: none;
 }
 
@@ -26,14 +24,14 @@ li {
 
 .main-nav {
   width: 100%;
-  height: 10rem;
+  height: 10em;
   display: grid;
-  grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+  grid-template-columns: 10em 1fr 2fr 1fr 10em;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.logo {
+.Nav-container >.logo {
   display: grid;
   
   /* background-color: #3b5998; */
@@ -48,7 +46,7 @@ li {
 }
 
 .menu-link ul {
-  height: 10rem;
+  height: 10em;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -59,7 +57,7 @@ li {
 }
 
 .social-media ul {
-  height: 10rem;
+  height: 10em;
   display: grid;
   grid-template-columns: 3fr repeat(3, 1fr);
   align-items: center;
@@ -77,7 +75,7 @@ li {
 /* ----------- Grid part ends ----------------- */
 
 .logo h2 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   font-weight: bold;
   text-transform: uppercase;
   color: black;
@@ -87,7 +85,7 @@ li {
 
 
 .menu-link ul li {
-  font-size: 1.8rem;
+  font-size: 1.8em;
 }
 
 .menu-link ul li a {
@@ -103,7 +101,7 @@ li {
 }
 
 .social-media ul li {
-  font-size: 1.8rem;
+  font-size: 1.8em;
 }
 
 .social-media .hamburger-menu {
@@ -117,22 +115,22 @@ li {
 /* responsive css style  */
 @media (max-width: 1080px) {
   .main-nav {
-    height: 8rem;
-    grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+    height: 8em;
+    grid-template-columns: 2em 3fr 3fr 1fr 2em;
   }
 
   .logo,
   .menu-link ul,
   .social-media ul {
-    height: 8rem;
+    height: 8em;
   }
 }
 
 /* responsive css style  */
 @media (max-width: 998px) {
   .main-nav {
-    height: 7rem;
-    grid-template-columns: 2fr 2fr 3fr 2rem 2rem;
+    height: 7em;
+    grid-template-columns: 2fr 2fr 3fr 2em 2em;
   }
 
   .menu-link {
@@ -141,7 +139,7 @@ li {
 
   .logo,
   .social-media ul {
-    height: 5rem;
+    height: 5em;
   }
 
   .mobile-menu-link {
@@ -152,11 +150,11 @@ li {
 
   .mobile-menu-link {
     background-color: white;
-    height: 20rem;
+    height: 20em;
     display: grid;
     grid-column: 2/5;
     align-items: center;
-    padding-left: 3rem;
+    padding-left: 3em;
     transition: all 2s linear;
     transform-origin: top;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -164,7 +162,7 @@ li {
   }
 
   .mobile-menu-link ul {
-    height: 20rem;
+    height: 20em;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -189,7 +187,7 @@ li {
   }
 
   .social-media {
-    height: 7rem;
+    height: 7em;
     display: flex;
     justify-self: end;
     align-items: center;
@@ -197,23 +195,23 @@ li {
 
   .social-media .hamburger-menu {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 }
 
 @media (max-width: 798px) {
   .main-nav {
-    height: 6rem;
-    grid-template-columns: 2fr 2rem 1fr 1fr 1rem;
+    height: 6em;
+    grid-template-columns: 2fr 2em 1fr 1fr 1em;
   }
 
   .logo,
   .social-media ul {
-    height: 6rem;
+    height: 6em;
   }
 
   .social-media {
-    height: 6rem;
+    height: 6em;
     display: flex;
     justify-self: end;
     align-items: center;
@@ -221,27 +219,27 @@ li {
 
   .social-media .hamburger-menu {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 }
 
 @media (max-width: 520px) {
   .main-nav {
-    height: 6rem;
-    grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+    height: 6em;
+    grid-template-columns: 1em 4fr 1fr 1fr 1em;
   }
 
   .logo,
   .social-media ul {
-    height: 6rem;
+    height: 6em;
   }
 
   .logo h2 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 
   .social-media {
-    height: 6rem;
+    height: 6em;
     display: flex;
     justify-self: end;
     align-items: center;
@@ -249,7 +247,7 @@ li {
 
   .social-media .hamburger-menu {
     display: block;
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 
   
@@ -257,7 +255,7 @@ li {
 
 /* .nav-2{
     width: 100%;
-    height: 4.4rem;
+    height: 4.4em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -279,5 +277,11 @@ li {
   border: none;
   cursor: pointer;
   height: 20px;
+}
+
+.Nav-container{
+  margin-bottom: 30px;
+  font-size: 62.5%;
+  
 }
 
