@@ -5,8 +5,10 @@ import Navbar from './components/Navbar/Navbar';
 import { Cart } from './pages/Cart';
 import {Payment}  from "./pages/Payment";
 import { Address } from "./pages/Address";
-import {OfferNavbar} from './components/subcomponents/OfferNavbar'
-import { AddressNavbar } from './components/subcomponents/AddressNavbar';
+import Women from "./pages/women";
+import Men from "./pages/men";
+
+
 
 function App() {
   return (
@@ -17,11 +19,9 @@ function App() {
         <Route path="/cart" element={ <Cart /> } />
         <Route path="/cart/address/payment" element={ <Payment/> } />
         <Route path="/cart/address" element={ <Address/> } />
-        <Route path="/" element={ <OfferNavbar/> } />
-       <Route path="/add" element={ < AddressNavbar/> } />
-        
+        <Route path="/womens" element={<Women/>}/>
+        <Route path="/mens" element={<Men/>}/>
       </Routes>
-       
     </div>  
   )
 

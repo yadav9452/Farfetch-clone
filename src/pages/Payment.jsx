@@ -15,7 +15,7 @@ export const Payment = () => {
       <p>Select your payment method</p>
       <div className={ styles.PaymentOptions }>
         <div>
-          <img src="../../public/Images/paypal.png" alt="" />
+          <img src="../Images/paypal.png" alt="paypal" />
         </div>
         <div>
           <p ><AiOutlineCreditCard />Debit or credit card</p>
