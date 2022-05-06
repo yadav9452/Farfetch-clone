@@ -64,7 +64,7 @@ export const Cart = () => {
         <div>
             <div className={ styles.header }>
                 <div className={ styles.headerDivs }>
-                    <h1>SHOPPING BAG</h1>
+                    <h2>SHOPPING BAG</h2>
                     <div onClick={ handleContinueShopping }>Continue Shopping</div>
                 </div>
             </div>
@@ -124,7 +124,7 @@ export const Cart = () => {
                     <h3>Summary</h3>
                     <div className={ styles.pymtDiv }>
                         <p>subtotal</p>
-                        <p>{ `$1,077.00` }</p>
+                        <p>{ `$ ${total_price - 24}.00` }</p>
                     </div>
                     <div className={ styles.pymtDiv }>
                         <p>Delivery</p>

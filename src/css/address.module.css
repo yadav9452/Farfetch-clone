@@ -27,6 +27,7 @@
     color: white;
     background-color: black;
     padding: 5px;
+    cursor: pointer;
 }
 
 .checkoutBtn:hover {
@@ -130,4 +131,5 @@
 }
 .rightText{
     display: flex;
+    align-items: center;
 }

@@ -9,8 +9,8 @@ export const AddressFooter = () => {
           </div>
           <div className={ styles.rightText }>
               <h4>IN / USD ($)</h4>
-              <a href="">Need Help?</a>
-              <a href=""> <FiPhoneCall /> (+44(0)20 3510 0670)</a>
+              <a href="#">Need Help?</a>
+              <a href="#"> <FiPhoneCall /> (+44(0)20 3510 0670)</a>
           </div>
       </div>
   )
