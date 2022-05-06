@@ -1,68 +1,149 @@
-import React, { useState } from 'react'
-import styles from '../css/cart.module.css'
-export const Cart = () => {
-    const current = new Date();
-    const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
+import React, { useState } from "react";
+import styles from "../css/cart.module.css";
+import { AiOutlineHeart } from "react-icons/ai";
+import { TiDeleteOutline } from "react-icons/ti";
+import { useNavigate } from "react-router-dom";
 
+export const Cart = () => {
+    const navigate = useNavigate();
     const [ cartItems, setCartItems ] = useState([
         {
-            img: "https://cdn-images.farfetch-contents.com/15/50/18/82/15501882_28982151_600.jpg",
-            id : 1,
-            title : "Acne Studios",
-            price : 782
-        }
+            img: "https://cdn-images.farfetch-contents.com/17/57/32/80/17573280_39028861_170.jpg",
+            id: 17573280,
+            brand: "Plam Angels",
+            title: "Leopard Bear cotton hoodie",
+            price: 782,
+            size: 36,
+        },
+        {
+            img: "https://cdn-images.farfetch-contents.com/17/57/32/80/17573280_39028861_170.jpg",
+            id: 17573280,
+            brand: "Plam Angels",
+            title: "Leopard Bear cotton hoodie",
+            price: 782,
+            size: 36,
+        },
+        {
+            img: "https://cdn-images.farfetch-contents.com/17/57/32/80/17573280_39028861_170.jpg",
+            id: 17573280,
+            brand: "Plam Angels",
+            title: "Leopard Bear cotton hoodie",
+            price: 782,
+            size: 36,
+        },
+        {
+            img: "https://cdn-images.farfetch-contents.com/17/57/32/80/17573280_39028861_170.jpg",
+            id: 17573280,
+            brand: "Plam Angels",
+            title: "Leopard Bear cotton hoodie",
+            quantity: 1,
+            price: 782,
+            size: 36,
+        },
     ]);
 
-    const handleDel = (_id) => {
-        console.log("u", _id);
-       
-        }
-  return (
-    <div>
-        <h1>SHOPPING BAG</h1>
-          <div>
-              <div>
+    const handleDel = (id) => {
+        console.log("id", id);
+    };
 
-                  { cartItems.map((data) => {
+    const handleCheckoutCart = () => {
+        navigate("/cart/address");
+    };
 
-                      return (
+    const handleContinueShopping = () => {
+        navigate("/products");
+    };
 
-                          <div className={ styles.cart }>
+    //total price
+    const total_price = cartItems.reduce((acc, current) => {
+        return acc + current.price;
+    }, 24);
+    console.log("total", total_price);
 
-                          <div key={ data.id } className={ styles.heading }>
-                                  <div className={ styles.cartprod }>styles
-                                  <div className={ styles.imageDiv } >
-                                          <img style={ { width: "100px" } } src={ data.img } alt="img" />
-                                  </div>
-                                  <div className={ styles.detailsDiv }>
-                                      <div>{ data.title }</div>
-                                      <div>{ data.price }</div>
-                                  </div>
-                              </div>
-                              <div className={ styles.cartdata }>{ date }</div>
-                              <div className={ styles.cartdata }>
-                                  <select>
-                                      <option value={ 1 }>1</option>
-                                      <option value={ 2 }>2</option>
-                                      <option value={ 3 }>3</option>
-                                      <option value={ 4 }>4</option>
-                                      <option value={ 5 }>5</option>
-                                      <option value={ 6 }>6</option>
-                                  </select>
-                              </div>
-                              <div className={ styles.cartdata }>
-                                  { data.price }
-                                  <div className={ styles.delbtn }>
-                                      <button onClick={ () => { handleDel(data._id); } }>X</button>
-                                  </div>
-                              </div>
-                          </div>
-                  </div>
-                      );
-                  }) }
-              </div>
-          </div>
-    </div>
+    return (
+        <div>
+            <div className={ styles.header }>
+                <div className={ styles.headerDivs }>
+                    <h2>SHOPPING BAG</h2>
+                    <div onClick={ handleContinueShopping }>Continue Shopping</div>
+                </div>
+            </div>
 
-  )
-}
+            <div className={ styles.cartContainer }>
+                <div>
+                    { cartItems.map((data) => {
+                        return (
+                            <div key={ data.id } className={ styles.cartProd }>
+                                <div className={ styles.imageDiv }>
+                                    <img src={ data.img } alt="" />
+                                </div>
+                                <div className={ styles.titleDesc }>
+                                    <h3 className={ styles }>{ data.brand }</h3>
+                                    <div className={ styles }>{ data.title }</div>
+                                    <div className={ styles }>{ `FARFETCH ID: ${data.id}` }</div>
+                                    <div>Exclusive</div>
+                                </div>
+
+                                <div>
+                                    <h3 className={ styles }>$ { data.price }</h3>
+                                    <div>(Import duties included)</div>
+                                </div>
+                                <div>
+                                    Size
+                                    <p className={ styles }>{ data.size }</p>
+                                    <div>
+                                        Quantity
+                                        <div className={ styles.quantity }>
+                                            <select>
+                                                <option value={ 1 }>1</option>
+                                                <option value={ 2 }>2</option>
+                                                <option value={ 3 }>3</option>
+                                                <option value={ 4 }>4</option>
+                                                <option value={ 5 }>5</option>
+                                                <option value={ 6 }>6</option>
+                                            </select>
+                                        </div>
+                                        <br />
+                                        <a className={ styles.wishlist } href="#">
+                                            <AiOutlineHeart /> Add to wishlist{ " " }
+                                        </a>
+                                    </div>
+                                </div>
+                                <div
+                                    onClick={ () => {
+                                        handleDel(data.id);
+                                    } }
+                                >
+                                    <TiDeleteOutline className={ styles.delBtn } />{ " " }
+                                </div>
+                            </div>
+                        );
+                    }) }
+                </div>
+                <div className={ styles.Summary }>
+                    <h3>Summary</h3>
+                    <div className={ styles.pymtDiv }>
+                        <p>subtotal</p>
+                        <p>{ `$ ${total_price - 24}.00` }</p>
+                    </div>
+                    <div className={ styles.pymtDiv }>
+                        <p>Delivery</p>
+                        <p>{ `$24.00` }</p>
+                    </div>
+                    <hr />
+                    <div className={ styles.pymtDiv }>
+                        <p>Total</p>
+                        <p>
+                            USD ${ total_price }.00
+                            <br />
+                            Import duties included
+                        </p>
+                    </div>
+                    <button onClick={ handleCheckoutCart } className={ styles.checkoutBtn }>
+                        Go To Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
