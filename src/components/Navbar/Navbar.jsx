@@ -73,7 +73,7 @@ const Navbar = () => {
         
       </div>
       </nav>
-      <  div class="search-container">
+      <  div className="search-container">
       <form action="/action_page.php">
       <input type="text" placeholder="Search.." name="search"/>
       <button type="submit"><AiOutlineSearch/></button>
