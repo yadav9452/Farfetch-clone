@@ -28,7 +28,7 @@ const Navbar = () => {
           }>
           <ul>
             <li>
-              <a href="#">Women</a>
+            <p onClick={ () => { navigate('/womens'); } }>women</p>
             </li>
             <li>
               <p onClick={ () => { navigate('/mens'); } }>Men</p>
