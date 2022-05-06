@@ -27,3 +27,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+.card{
+ 
+  display: inline;
+  margin: 0 auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.card img{
+  width: 350px;
+}
