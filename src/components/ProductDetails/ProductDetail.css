@@ -1,0 +1,184 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 350px;
+    /* border: 1px solid black; */
+    margin-top: 10%;
+    font-family:  Arial, sans-serif;
+}
+
+.left{
+  width:60%;
+  height: 100%;
+  display: flex;
+  /* border: 1px solid   green; */
+ }
+ .right{
+  width:30%;
+  height: 100%;
+  /* margin-left:20px; */
+  /* border: 1px solid  red; */
+ 
+ }
+
+ .left>div>img{
+   width: 130%;
+   height: 350px;
+   /* border: 1px solid  red; */
+ 
+ }
+ .left>div{
+   margin-left: 10%;
+   /* border: 1px solid  blue; */
+   align-items: center;
+ }
+ .right>p{
+     /* border: 1px solid  blue; */
+     margin-right: 75%;
+     font-size: 100%;
+     margin-top: 2px;
+     font-family:    Arial, sans-serif;
+ }
+ .right>h1{
+  padding-right: 63%;
+  font-family:  Arial, sans-serif;
+
+ }
+ .right>p1{
+  
+  /* border: 1px solid  blue; */
+   padding-right: 58%;
+   font-size: 120%;
+   width:10%;
+   font-family:  Arial, sans-serif;
+
+}
+ .right>p2{
+  margin-top: 10px;
+  /* border: 1px solid  yellowgreen; */
+   padding-right: 48%;
+   font-size: 120%;
+   width:10%;
+   font-family:    Arial, sans-serif;
+ 
+   /* padding-top: 0%; */
+
+}
+.right>p3{
+  font-size: small;
+  color: black;
+  margin-right:61%;
+  font-family:  Arial, sans-serif;
+
+  
+}
+
+.right>select{
+  padding-right: 30%;
+  margin-top: 3%;
+  margin-right: 10%;
+  border: 2px solid   black;
+  width: 80%;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: underline;
+  margin-left: 55%;
+  cursor: pointer;
+  font-family:  Arial, sans-serif;
+} 
+
+.right>p4{
+  margin-right: 67%;
+  margin-top: 5%;
+  font-size: 11px;
+  font-family:  Arial, sans-serif;
+}
+
+.right>p5{
+  color:red; 
+  font-size: 12px;
+ /* border: 1px solid black; */
+ margin-top: 10px;
+ font-family:  Arial, sans-serif;
+}
+
+.right>p6{
+  
+   margin-right: 67%;
+   font-size: 11px;
+   width:10%;
+   font-family:  Arial, sans-serif;
+}
+.right>div>img{
+  width: 14%;
+  height: 45px;
+  margin-right: 70%;
+  cursor: pointer;
+  /* border: 1px solid  red; */
+}
+.right>div>img:hover{
+  width: 18%;
+  height: 50px;
+  margin-right: 70%;
+  /* border: 1px solid  red; */
+}
+.add{
+  display: flex;
+  margin-left: 5%;
+  margin-top: 3%;
+ 
+}
+.add>div{
+   border: 1px solid black;
+   width: 30%;
+   margin-left: 10px;
+   font-size: 120%;
+   padding-right: 10px;
+   padding-top: 2px;
+   cursor: pointer;
+}
+ 
+.add>button{
+  width:50%;
+  height: 28px;
+  cursor: pointer;
+background-color: rgb(34,34,34);
+color: white;
+border-radius: 5px;
+display: grid;
+place-content: center;
+}
+.add>button:hover{
+  background-color: grey;
+  color: white;
+  border: transparent;
+}
+.loading{
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border:3px solid transparent;
+  border-top-color: #fff;
+  animation: an1 1s ease infinite;
+
+}
+@keyframes an1{
+  0%{
+    transform: rotate(0turn);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+
+}
+ .heart{
+  color:none
+ }
+.heart:hover{
+  color: gray;
+}
+ 
