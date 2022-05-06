@@ -1,4 +1,10 @@
 /* mainpage */
+.cartContainer {
+    width: 95%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
 
 /* offer */
 .offer {
@@ -7,55 +13,46 @@
     font-size: 12px;
     border-bottom: 1px solid rgb(228, 228, 228);
 }
-.header{
-    width: 58%;
-    margin: 2% auto;
-    font-size: 20px; 
-    text-align: right;
-    /* border: 2px solid black;      */
-}
-.headerDivs{
-    /* width: 50%; */
-    margin: auto;
-    display: flex;
-    justify-content: space-between; 
-    flex-direction: row;
-}
-
 
 /* heading */
-.heading {
-    width: 98%;
-    border-bottom: 1px solid rgb(228, 228, 228);
-    margin: auto;
-    padding: 10px 0px;
+.header {
+    width: 58%;
+    margin: 2% auto;
+    font-size: 20px;
+    text-align: right;
+}
+
+.headerDivs {
     display: flex;
-    font-size: 12px;
+    justify-content: space-between;
     flex-direction: row;
-    column-gap: 10%;
+    align-items: center;
+    text-align:center ;
 }
-
-.headdata {
-    width: 10%;
+.headerDivs div:hover{
+ cursor: pointer;
+ text-decoration: underline;
 }
-
+.headerDivs h2{
+    font-size: 30px;
+}
 .cartProd {
     display: flex;
     width: 140%;
     justify-content: space-between;
     text-align: left;
     border-top: 1px solid silver;
-    padding: 10px ;
+    padding: 10px;
 
-   
+
 }
 
 
 
-.imageDiv{
-width: 120px;
-height: 160px;
-align-items: center;
+.imageDiv {
+    width: 120px;
+    height: 160px;
+    align-items: center;
 }
 
 .imageDiv>img {
@@ -64,52 +61,54 @@ align-items: center;
 }
 
 
-.titleDesc{
+.titleDesc {
     padding: 10px;
     /* font-size: 20px; */
 }
 
 
-.delBtn{
+.delBtn {
     font-size: 30px;
 }
 
-.cartContainer{
-    width: 95%;
-    margin: 20px auto;
-    display: flex;
-    justify-content: space-between;
+
+
+.Summary {
+    width: 20%;
+    text-align: left;
+
 }
 
-.Summary{
-    width: 20%;  
-        text-align: left;
-    
-}
-.pymtDiv{
+.pymtDiv {
     display: flex;
     justify-content: space-between;
     text-align: right;
     margin: 10px 0;
     /* margin-right: 30px; */
 }
-.wishlist{
+
+.wishlist {
     align-items: center;
     color: black;
 }
-.checkoutBtn{
-    width:  100%;
-    font-size: 1rem;
+
+.checkoutBtn {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
     border: none;
     color: white;
     background-color: black;
-padding: 5px;    
+    padding: 5px;
+    cursor: pointer;
 }
-.checkoutBtn:hover{
+
+.checkoutBtn:hover {
     background-color: #595959;
 
 }
-.quantity>select{
+
+.quantity>select {
     width: 40%;
     font-size: 17px;
     text-align: center;

@@ -3,12 +3,14 @@
 
 
 
-.menu-link a {
+.Nav-container a {
   text-decoration: none;
 }
 
-.menu-link li {
+.Nav-container li {
   list-style: none;
+  cursor: pointer;
+  color: black;
 }
 
 
@@ -16,13 +18,20 @@
   list-style: none;
 
 }
+.Nav-container{
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid whitesmoke;
+  align-items: center;
+}
 .main-nav {
   width: 100%;
   height: 10em;
   display: grid;
   grid-template-columns: 10em 1fr 2fr 1fr 10em;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
 }
 
 .Nav-container >.logo {
@@ -73,7 +82,7 @@
   font-weight: bold;
   text-transform: uppercase;
   color: black;
-  
+  cursor: pointer;
 }
 
 
