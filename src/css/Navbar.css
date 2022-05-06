@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
 
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Jost", sans-serif;
-} */
 
 
 
@@ -19,11 +13,11 @@
   color: black;
 }
 
-/* 
- 
 
-/* navbar style start  */
+.social-media li {
+  list-style: none;
 
+}
 .Nav-container{
   position: sticky;
   top: 0;
@@ -31,7 +25,6 @@
   border-bottom: 1px solid whitesmoke;
   align-items: center;
 }
-
 .main-nav {
   width: 100%;
   height: 10em;
@@ -196,6 +189,7 @@
     display: none;
   }
 
+  
   .social-media {
     height: 7em;
     display: flex;
@@ -263,14 +257,7 @@
   
 }
 
-/* .nav-2{
-    width: 100%;
-    height: 4.4em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: black; */
-/* } */ 
+
 
 .search-container {
   float: right;
@@ -290,7 +277,7 @@
 }
 
 .Nav-container{
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   font-size: 62.5%;
   
 }
