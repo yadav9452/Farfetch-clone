@@ -7,6 +7,7 @@ import {Payment}  from "./pages/Payment";
 import { Address } from "./pages/Address";
 
 
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,6 @@ function App() {
         <Route path="/cart/address" element={ <Address/> } />
 
       </Routes>
-       
     </div>  
   )
 
