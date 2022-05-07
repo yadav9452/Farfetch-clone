@@ -4,7 +4,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Checkbox from '@material-ui/core/Checkbox';
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 
 const Signup = ({ handleChange }) => {
   const paperStyle = { padding: 20, height: '45vh', width: 300, margin: "0 auto" };
@@ -15,7 +15,8 @@ const Signup = ({ handleChange }) => {
 
   //States
   const [ formData, setForm ] = useState({
-    name : '',
+    firstName : '',
+    lastName:"sai",
     email: "",
     password: "",
   });
@@ -29,31 +30,33 @@ const Signup = ({ handleChange }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.firstName === "" || formData.email === "" || formData.password === ""){
       return
     }
-    console.log(formData);
-  let  registerData = JSON.stringify(formData);
-    const result = fetch('https://max-fashion-backend.herokuapp.com/register',{
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: registerData
-    }).then((res) => res.json());
-    console.log("status",result);
-  
-    if (result.status === "ok") {
+    // console.log(formData);
+  // let  registerData = JSON.stringify(formData);
+    // const result = await fetch('http://localhost:2345/register',{
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(formData)
+    // })
+    // const data =await result.json()
+    const {data} = await axios.post("https://farfetch-backend.herokuapp.com/register", formData)
+    console.log(data)
+    
+    if (data.status === "ok") {
       alert("success");
       // window.location.href = "signin.html";
     } 
     else {
-         alert(result.error)
-      // alert("email should be unique");
+        //  alert(data.error)
+      alert("email should be unique");
     }
-    console.log("res", result);
+    
     // navigate('/account#')
    
     // console.log("event", res);
@@ -70,7 +73,7 @@ const Signup = ({ handleChange }) => {
     <Grid>
       <Paper style={ paperStyle }>
         <form>
-          <TextField fullWidth label='Name' placeholder="Enter your name" onChange={ handleInput } id='name' required/>
+          <TextField fullWidth label='Name' placeholder="Enter your name" onChange={ handleInput } id='firstName' required/>
           <TextField fullWidth label='Email' placeholder="Enter your email" onChange={ handleInput } id='email' required/>
           <TextField fullWidth label='Password' placeholder="Enter your password" onChange={ handleInput } id='password' required/>
           <FormHelperText>By registering, you agree with our Terms & Conditions and Privacy and Cookie Policy.</FormHelperText>

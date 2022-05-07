@@ -23,6 +23,7 @@ function App() {
         />
     )
 }) 
+console.log(cards)
   return (
     <div className="App">
     
