@@ -1,0 +1,49 @@
+.Navbox{
+    border: 1px solid rgb(204,204,204);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: white ;
+   
+}
+.Navbox-left{
+    
+    display: flex;
+}
+.Navbox-left > p{
+    margin-left: 10px;
+   
+    
+}
+.Navbox-left > p2{
+margin-left: 25%;
+padding-top: 15px;
+}
+.Navbox-left > p3{
+margin-left: 1%;
+padding-top: 15px;
+}
+.Navbox-left > h1{
+     font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+    margin-left:33% ;
+  
+  
+}
+.lock{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.tele{
+    
+    margin-left: 20px;
+    margin-top: 15px;
+  
+}

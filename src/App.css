@@ -28,7 +28,6 @@
   }
 }
 
-
 .card{
  
   display: inline;
@@ -41,4 +40,7 @@
 .card img{
   width: 350px;
   height: 200px;
+}
+.twitter icon{
+  width: 30%;
 }
