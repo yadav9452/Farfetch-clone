@@ -30,10 +30,13 @@ export const ProductDetails = () => {
         <p><span>${ singleData.price }</span> (Import duties included)</p>
         <p>Size guide</p>
         <select>
-          <option>Select Size</option>
+          <option>Select Size Off-White Standard</option>
+          <option>XXS</option>
           <option>S</option>
           <option>M</option>
           <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
         </select>
         <br />
 

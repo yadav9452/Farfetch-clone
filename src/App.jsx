@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
 
-      <HomePageDrop/>
       
       <AllRoutes />
+      {/* <HomePageDrop/> */}
     </div>  
   )
 }

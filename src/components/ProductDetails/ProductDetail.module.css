@@ -62,18 +62,22 @@
 }
 
 .right>select {
-  width: 40%;
-  font-size: 16px;
-  text-align: center;
+  width: 98%;
+  font-size: 15px;
+  height: 40px;
+  text-align: left;
   background-color: transparent;
   margin: 10px 0;
+  font-weight: 500;
+  border-radius: 4px;
+  color: black;
 }
 
 .right p:last-child {
   font-weight: lighter;
   cursor: pointer;
-color: red;
-font-size: 14px;
+  color: red;
+  font-size: 14px;
 }
 
 
@@ -115,6 +119,7 @@ font-size: 14px;
 .save:hover {
   background-color: #595959;
 }
+
 .add>button:nth-child(2) {
   border: 1px solid black;
   width: 50%;
@@ -131,4 +136,3 @@ font-size: 14px;
 .add>button:nth-child(2):hover {
   color: gray;
 }
-

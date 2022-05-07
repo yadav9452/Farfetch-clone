@@ -9,11 +9,13 @@ import Men from "../pages/men";
 import Account from "../pages/Account";
 import CustomizedDialogs from "../components/Navbar/dialog";
 import { ProductDetails } from "../components/ProductDetails/ProductDetails";
+import { OfferNavbar } from "../components/subcomponents/OfferNavbar";
 
 export const AllRoutes = () => {
    
     return (
         <div>
+            <OfferNavbar />
             <Navbar />
             <NavImg />
             <Routes>
