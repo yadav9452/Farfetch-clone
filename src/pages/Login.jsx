@@ -3,6 +3,8 @@ import { Grid, Paper, OutlinedInput, TextField, Button, Typography, Link } from 
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { fontSize } from '@mui/system';
+import {useNavigate} from "react-router-dom"
+import { Home } from '@material-ui/icons';
 
 
 const Login = ({ handleChange }) => {
@@ -14,6 +16,7 @@ const Login = ({ handleChange }) => {
   const gridStyle = { boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"}
 
 //States
+  const navigate = useNavigate();
   const [ formData, setForm ] = useState({
     email: "",
     password: "",
@@ -28,7 +31,7 @@ const Login = ({ handleChange }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     if (formData.email === "" || formData.password === "") {
       return;
     }
@@ -37,17 +40,20 @@ const Login = ({ handleChange }) => {
     
       let loginData = JSON.stringify(formData);
       console.log(loginData);
-    const result = fetch('https://max-fashion-backend.herokuapp.com/login',{
+    const result = await fetch('https://farfetch-backend.herokuapp.com/login',{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: loginData
-    }).then((res) => res.json());
-    console.log(result);
+    })
+    const data = await result.json()
+    console.log(data)
 
-    if(result.data){
-      return alert("ok")
+
+    if(data.status === "ok"){
+      return navigate("/mens")
+
     }
     // if (result.status === "ok") {
     //   alert("success");
