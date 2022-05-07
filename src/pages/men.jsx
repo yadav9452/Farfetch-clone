@@ -69,7 +69,7 @@ const items = [
 ];
 
 const Men = () => {
-  const [product, setProduct] = useState([]);
+  const [ product, setProduct ] = useState([]);
   const getProduct = async () => {
     const response = await fetch(
       "https://farfetch-backend.herokuapp.com/products"
@@ -83,7 +83,7 @@ const Men = () => {
 
   return (
     <div className="men">
-      {/* <News /> */}
+      {/* <News /> */ }
       <div className="page-news">
         <h6>DESIGNER CLOTHING FOR MEN</h6>
         <p>
@@ -93,22 +93,22 @@ const Men = () => {
       </div>
       <div className="men-page">
         <div className="sidebar">
-          <Sidebar items={items} />
+          <Sidebar items={ items } />
         </div>
         <div className="collection">
-          {product.map(product => (
+          { product.map(product => (
             <Collection
               // gender={product.}
               // key={product._id}
               // id={product._id}
-              image={product.img_url}
-              title={product.title}
-              Category={product.category}
-              description={product.detail}
-              price={product.price}
-              
+              image={ product.img_url }
+              title={ product.title }
+              Category={ product.category }
+              description={ product.detail }
+              price={ product.price }
+
             />
-          ))}
+          )) }
         </div>
       </div>
       {/* <Contact />

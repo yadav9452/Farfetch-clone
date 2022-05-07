@@ -9,6 +9,8 @@ import {Payment}  from "./pages/Payment";
 import { Address } from "./pages/Address";
 import Women from "./pages/women";
 import Men from "./pages/men";
+import Account from "./pages/Account";
+import CustomizedDialogs from "./components/Navbar/dialog";
 
 
 function App() {
@@ -26,12 +28,17 @@ function App() {
     
       <Navbar />
       {cards}
+      {/* <CustomizedDialogs > */}
+        
       <Routes>
         <Route path="/cart" element={ <Cart /> } />
         <Route path="/cart/address/payment" element={ <Payment/> } />
         <Route path="/cart/address" element={ <Address/> } />
         <Route path="/womens" element={<Women/>}/>
         <Route path="/mens" element={<Men/>}/>
+          <Route path="/account" element={ <CustomizedDialogs ><Account />
+          </CustomizedDialogs> } />
+
       </Routes>
     </div>  
   )
