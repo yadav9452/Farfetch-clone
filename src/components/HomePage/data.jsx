@@ -1,16 +1,17 @@
 export default [
     {
-        img : "https://i.postimg.cc/j207mWxb/farfech1.webp",
+        img : "https://i.postimg.cc/htDZK0Fj/farfetch-women.png",
         title: "Womens shopping"
     },
     {
-        img : "https://i.postimg.cc/c1tqcvtJ/farfech2.webp",
+        img : "https://i.postimg.cc/SRGLPwxG/farfetch-men.png",
         title: "Mens shopping"
     },
     {
-        img : "https://i.postimg.cc/Rhdb0xbN/farfech3.webp",
+        img : "https://i.postimg.cc/dttG1N0z/farfetch-kids.png",
         title: "Kids shopping"
     }
+    
 ]
 
 
