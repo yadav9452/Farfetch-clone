@@ -1,30 +1,13 @@
  import  "./ProductDetail.css";
- 
  import React, {useState} from 'react'
-//  import DoneIcon from '@mui/icons-material/Done';
- 
- import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux'
+ import { FaHeart } from 'react-icons/fa';
 
 export  const ProductDetails = ()=> {
  
-// const [process,setProcess]=useState([
-//   {icon: <DoneIcon/>,
-//   label: 'Done'
-// ]),
-  
-//   const handelClick=()=>{
-//     setProcess({
-//       label: 'Loding..'
-//     })
-//     setTimeout(()=>{
-//       setProcess({
-//         icon: <DoneIcon/>,
-//         label: 'Done'
-//       })
-//     }
-//     ,2000)
-//   }
-
+  const singleData  = useSelector(state => state);
+  console.log("singleData", singleData)
+  const dispatch = useDispatch()
 
 
 

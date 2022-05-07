@@ -1,0 +1,25 @@
+.cardContainer{
+    display: flex;
+    width: 8%;
+    text-align: left;
+    justify-content: left;
+}
+
+.card {
+  width: 350px;
+  margin: 10px;  
+}
+
+.card img {
+    width: 100%;
+}
+@media screen and (max-width:600px) {
+    .cardContainer{
+      display: none;
+    }
+}
+@media screen and (max-width:900px) {
+.card img {
+    width: 200px;
+  }
+}

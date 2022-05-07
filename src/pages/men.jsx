@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import News from "../components/news";
 import Collection from "../components/All_Products/collection";
 import Sidebar from "../components/All_Products/sidebar";
 import "../css/men.css";
@@ -7,8 +6,9 @@ import AttachMoney from "@material-ui/icons/AttachMoney";
 import HomeIcon from "@material-ui/icons/Home";
 import ColorLens from "@material-ui/icons/ColorLens";
 import ClearAll from "@material-ui/icons/ClearAll";
-// import Contact from "../components/contact";
-// import Footer from "../components/footer";
+import { useDispatch, useSelector } from 'react-redux';
+import {  mensData } from "../Redux/action";
+
 
 const items = [
   {
@@ -69,21 +69,30 @@ const items = [
 ];
 
 const Men = () => {
-  const [product, setProduct] = useState([]);
+  const dispatch = useDispatch()
+
+  const menProducts = useSelector(state => state.menProducts)
+  console.log('menProducts', menProducts);
+
+  const storingData = useSelector(state => state.storingData);
+  console.log('storingData', storingData);
+  
   const getProduct = async () => {
     const response = await fetch(
       "https://farfetch-backend.herokuapp.com/products"
     );
     const data = await response.json();
-    setProduct(data);
+    dispatch(mensData(data));
   };
   useEffect(() => {
     getProduct();
   }, []);
 
+
+
   return (
     <div className="men">
-      {/* <News /> */}
+      {/* <News /> */ }
       <div className="page-news">
         <h6>DESIGNER CLOTHING FOR MEN</h6>
         <p>
@@ -93,22 +102,21 @@ const Men = () => {
       </div>
       <div className="men-page">
         <div className="sidebar">
-          <Sidebar items={items} />
+          <Sidebar items={ items } />
         </div>
-        <div className="collection">
-          {product.map(product => (
-            <Collection
-              // gender={product.}
-              // key={product._id}
-              // id={product._id}
-              image={product.img_url}
-              title={product.title}
-              Category={product.category}
-              description={product.detail}
-              price={product.price}
-              
+        <div className="collection" >
+          { menProducts.map(product => (
+            <Collection 
+              products={"products"}
+              key={product._id}
+              id={product._id}
+              image={ product.img_url }
+              title={ product.title }
+              Category={ product.category }
+              description={ product.detail }
+              price={ product.price }
             />
-          ))}
+          )) }
         </div>
       </div>
       {/* <Contact />

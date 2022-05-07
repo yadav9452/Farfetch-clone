@@ -4,7 +4,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
 
-export const Cart = () => {
+export const CartPage = () => {
     const navigate = useNavigate();
     const [ cartItems, setCartItems ] = useState([
         {

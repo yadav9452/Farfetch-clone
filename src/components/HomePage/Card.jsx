@@ -1,17 +1,19 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import data from "./data";
+import styles from './card.module.css'
 
-
-import React from "react"
-
-export default function Card(props) {
-    
+export const NavImg = () => {
     return (
-       
-        
-        <div className="card">
-            <img src={props.img} alt="" />
-            {/* <h2> {props.title}</h2> */}
-        
+        <div className={styles.cardContainer}>
+            { data.map(item => (
+                    <Link to={ item.url }>
+                <div className={styles.card}>
+                        <img src={ item.img } alt="" />
+                </div>
+                    </Link>
+            )) }
         </div>
-        
-    )
-}
+    );
+};
+
