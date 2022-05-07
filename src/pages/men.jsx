@@ -7,7 +7,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import ColorLens from "@material-ui/icons/ColorLens";
 import ClearAll from "@material-ui/icons/ClearAll";
 import { useDispatch, useSelector } from 'react-redux';
-import {  mensData } from "../Redux/action";
+import { mensData } from "../Redux/action";
 
 
 const items = [

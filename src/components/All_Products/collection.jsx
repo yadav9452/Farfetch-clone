@@ -6,9 +6,12 @@ import "../../css/collection.css";
 import { handleSingleData } from "../../Redux/action";
 
 const Collection = ({ products, image, title,Category, description, price, id }) => {
+  const passSingleData = () => {
+    dispatch(handleSingleData(id))
+  }
   const dispatch = useDispatch()
   return (
-    <div className="product" onClick={ dispatch(handleSingleData(id)) }>
+    <div className="product" onClick={ passSingleData }>
       <Link to={ `/${products}/${id}`}>
         <div className="item">
           <img src={image} />

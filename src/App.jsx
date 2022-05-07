@@ -1,8 +1,5 @@
-import react from "react";
 import { AllRoutes } from "./All_Routes/AllRoutes";
 import "./App.css";
-
-
 
 function App() {
   return (

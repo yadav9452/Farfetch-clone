@@ -16,20 +16,23 @@ export const reducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 menProducts: payload,
-                storingData: [ ...state.storingData, payload ] 
+                storingData: payload
             };
         }
         case WOMENS_DATA: {
             return {
                 ...state,
                 womenProducts: payload,
-                storingData: [ ...state.storingData, payload ] 
+                storingData: payload
             };
         }
         case HANDLE_SINGLE_DATA: {
+            console.log('pay', payload);
+            console.log('store', state.storingData);
+
             return {
                 ...state,
-                singleData: [ ...state.storingData ].filter((item) => item.id === payload)
+                singleData:  state.storingData.filter((item) => item._id === payload)
             };
         }
         case CART: {
@@ -49,7 +52,8 @@ export const reducer = (state = initialState, { type, payload }) => {
         case REMOVE_DATA_FROM_CART: {
             return {
                 ...state,
-                cart: [ ...state.cart ].filter((item) => item.id !== payload)
+                // cart: state.cart.splice( payload,0)
+                cart: [ ...state.cart ].splice(payload, state.cart.length-1)
             };
         }
         default:

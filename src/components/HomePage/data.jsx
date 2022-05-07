@@ -1,4 +1,4 @@
-export default [
+export default  [
     {
         img : "https://i.postimg.cc/j207mWxb/farfech1.webp",
         title: "Womens shopping",
