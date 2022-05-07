@@ -10,6 +10,9 @@ const Login = ({ handleChange }) => {
   const paperStyle = { padding: 20, height: '45vh', width: 300, margin: "0 auto" };
   const btnstyle = { margin: '8px 0', backgroundColor: 'black', color:'white'};
   const forgetPass = { color : "black", fontSize:"14px"}
+  
+  const gridStyle = { boxShadow: "rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"}
+
 //States
   const [ formData, setForm ] = useState({
     email: "",
@@ -58,7 +61,7 @@ const Login = ({ handleChange }) => {
   
 
   return (
-    <Grid>
+    <Grid style={gridStyle}>
       <Paper style={ paperStyle }>
         <form>
         <TextField label='Email address' placeholder='Enter email' fullWidth required onChange={ handleInput } id='email'/>

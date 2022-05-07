@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-// import News from "../components/news";
+import React, { useEffect } from "react";
 import Collection from "../components/All_Products/collection";
 import Sidebar from "../components/All_Products/sidebar";
 import "../css/women.css";
@@ -7,8 +6,9 @@ import AttachMoney from "@material-ui/icons/AttachMoney";
 import HomeIcon from "@material-ui/icons/Home";
 import ColorLens from "@material-ui/icons/ColorLens";
 import ClearAll from "@material-ui/icons/ClearAll";
-// import Contact from "../components/contact";
-// import Footer from "../components/footer";
+import { womensData } from "../Redux/action";
+import { useDispatch, useSelector } from 'react-redux'
+
 
 const items = [
   {
@@ -69,15 +69,20 @@ const items = [
 ];
 
 const Women = () => {
-  const [product, setProduct] = useState([]);
-  console.log("saikiran");
+
+  const dispatch = useDispatch()
+  const womenProducts = useSelector(state => state.womenProducts);
+  console.log('womenProducts', womenProducts);
+
+  const storingData = useSelector(state => state.storingData);
+  console.log('storingData', storingData);
+
   const getProduct = async () => {
     const response = await fetch(
       "https://farfetch-backend.herokuapp.com/products2"
     );
     const data = await response.json();
-    setProduct(data);
-    console.log(data)
+    dispatch(womensData(data));
   };
   useEffect(() => {
     getProduct();
@@ -98,9 +103,9 @@ const Women = () => {
           <Sidebar items={items} />
         </div>
         <div className="collection">
-          {product.map(product => (
+          { womenProducts.map(product => (
             <Collection
-              // gender={product.gender}
+              products={"products"}
               key={product._id}
               id={product._id}
               image={product.img_url}
