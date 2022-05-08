@@ -3,8 +3,11 @@ import './AddressNavbar.css';
 
 import { BsTelephone } from 'react-icons/bs';
 import { FiLock } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 export const AddressNavbar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='Navbox'>
 
@@ -16,7 +19,7 @@ export const AddressNavbar = () => {
         </div>
 
         <div>
-          <p>FARFETCH</p>
+          <p onClick={ () => { navigate('/') }}>FARFETCH</p>
         </div>
 
         <div >

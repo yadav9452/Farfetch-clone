@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux';
-import { fetchAddress } from "../../Redux/action";
+import { fetchAddress, getAddress } from "../../Redux/action";
 
 export const Address = () => {
     const navigate = useNavigate();
@@ -39,9 +39,9 @@ export const Address = () => {
             });
         // window.location.reload(true);
     };
-    useEffect(() => {
-        dispatch(fetchAddress());
-    }, [])
+    // useEffect(() => {
+    //     dispatch(fetchAddress());
+    // }, [])
 
     const cartItems = useSelector(state => state.cart);
     console.log("cart", cartItems);
@@ -55,7 +55,8 @@ export const Address = () => {
             alert("Please Add to Bag First");
            return navigate("/");
         }
-        handleAddress()
+        dispatch(getAddress(address))
+        // handleAddress()
         navigate("/cart/address/payment");
     };
     return (

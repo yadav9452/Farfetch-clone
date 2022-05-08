@@ -5,8 +5,7 @@ export const PaymentFooter = () => {
   const add = useSelector(state => state.address);
 
   let data = add[ add.length - 1 ];
- data = data[ data.length - 1 ];
-  // console.log("data[0]", x.firstName);
+  console.log("data", data.firstName);
 
   return (
     <div className={ styles.cardForm }>

@@ -52,8 +52,8 @@ export const reducer = (state = initialState, { type, payload }) => {
             console.log('remove',payload, state.cart)
             return {
                 ...state,
-                cart: state.cart.splice( payload,state.cart.length-1)
-                // cart: [ ...state.cart ].splice(payload, 1)
+                cart: state.cart.filter(e => e._id != payload)
+                
             };
         }
         default:

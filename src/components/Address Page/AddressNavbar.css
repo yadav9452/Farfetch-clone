@@ -33,6 +33,7 @@
     font-weight: bolder;
     font-size: 20px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .Navbox-left>div:nth-child(3) {

@@ -29,7 +29,7 @@ export const CartData = () => {
     };
 
     const handleContinueShopping = () => {
-        navigate("/products");
+        navigate("/");
     };
 // const total_price = 0
     //total price
@@ -72,7 +72,7 @@ export const CartData = () => {
                                     <div>
                                         Quantity
                                         <div className={ styles.quantity }>
-                                            <select>
+                                            <select >
                                                 <option value={ 1 }>1</option>
                                                 <option value={ 2 }>2</option>
                                                 <option value={ 3 }>3</option>
@@ -91,7 +91,7 @@ export const CartData = () => {
 
                                 >
                                     <TiDeleteOutline className={ styles.delBtn } onClick={ () => {
-                                        handleDel(index);
+                                        handleDel(data._id);
                                     } } />{ " " }
                                 </div>
                             </div>
