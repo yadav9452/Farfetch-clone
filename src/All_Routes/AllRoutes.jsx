@@ -24,7 +24,7 @@ export const AllRoutes = () => {
                 <Route path="/account" element={ <CustomizedDialogs ><Account />
                 </CustomizedDialogs> } />
                 <Route path="/products/:id" element={ <Singleproduct /> } />
-
+                <Route path="*" component={ <Home /> } />
             </Routes>
         </div>
     );
