@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "../css/address.module.css";
-import { AddressFooter } from "../components/subcomponents/AddressFooter";
+import styles from "../../css/address.module.css";
 import { useNavigate } from "react-router-dom";
 
 
@@ -26,7 +25,7 @@ export const Address = () => {
                             </div>
                             <div>
                                 <div>Last Name</div>
-                                <input type="text" name="lastName"/>
+                                <input type="text" name="lastName" />
                             </div>
                         </div>
 
@@ -40,7 +39,7 @@ export const Address = () => {
                         </select>
 
                         <div>Address</div>
-                        <input type="text" name="Address"/>
+                        <input type="text" name="Address" />
                         <input type="text" name="Address" />
 
                         <div className={ styles.flexInput }>
@@ -67,7 +66,7 @@ export const Address = () => {
 
                         <div className={ styles.flexCheckbox }>
                             <div>
-                                <input type="checkbox" checked="checked"  />
+                                <input type="checkbox" checked="checked" />
                             </div>
                             <div>
                                 <div>Use as billing address</div>
@@ -95,13 +94,13 @@ export const Address = () => {
                             Import duties included
                         </p>
                     </div>
-                    <button onClick={handleContinue } className={ styles.checkoutBtn }>
+                    <button onClick={ handleContinue } className={ styles.checkoutBtn }>
                         Save and Continue
                     </button>
                 </div>
             </div>
 
-            <AddressFooter />
+            
         </div>
     );
 };

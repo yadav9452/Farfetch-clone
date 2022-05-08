@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import styles from "../css/cart.module.css";
+import styles from "../../css/cart.module.css";
 import { AiOutlineHeart } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { removeDataFromCart } from "../Redux/action";
+import { removeDataFromCart } from "../../Redux/action";
 
-export const CartPage = () => {
+export const CartData = () => {
     const navigate = useNavigate();
 
     const cartItems = useSelector(state => state.cart);
@@ -17,7 +17,7 @@ export const CartPage = () => {
 
     const handleDel = (id) => {
         console.log("id", id);
-        dispatch(removeDataFromCart(id))
+        dispatch(removeDataFromCart(id));
     };
 
     const handleCheckoutCart = () => {
@@ -45,9 +45,9 @@ export const CartPage = () => {
 
             <div className={ styles.cartContainer }>
                 <div>
-                    { cartItems.map((data) => {
+                    { cartItems.map((data,index) => {
                         return (
-                            <div key={ data.id } className={ styles.cartProd }>
+                            <div key={ data._id } className={ styles.cartProd }>
                                 <div className={ styles.imageDiv }>
                                     <img src={ data.img_url } alt="" />
                                 </div>
@@ -84,11 +84,11 @@ export const CartPage = () => {
                                     </div>
                                 </div>
                                 <div
-                                  
+
                                 >
                                     <TiDeleteOutline className={ styles.delBtn } onClick={ () => {
-                                        handleDel(data._id);
-                                    } }/>{ " " }
+                                        handleDel(index);
+                                    } } />{ " " }
                                 </div>
                             </div>
                         );

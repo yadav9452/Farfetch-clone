@@ -1,9 +1,16 @@
 import React from 'react'
+import { NavImg } from '../components/HomePage/Card';
+import HomePageDrop from '../components/HomePage/HomePageDrop';
+import Navbar from '../components/Navbar/Navbar';
+import { OfferNavbar } from '../components/subcomponents/OfferNavbar';
 
 export const Home  = () => {
   return (
-    <div>
-        Home
-         </div>
+    <>
+      <OfferNavbar />
+      <Navbar />
+      <NavImg />
+      <HomePageDrop />
+         </>
   )
 }

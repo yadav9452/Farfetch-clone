@@ -1,32 +1,29 @@
 import { Route, Routes } from "react-router-dom";
-import { NavImg } from "../components/HomePage/Card";
-import Navbar from '../components/Navbar/Navbar';
-import { CartPage } from '../pages/Cart';
-import { Payment } from "../pages/Payment";
-import { Address } from "../pages/Address";
-import Women from "../pages/women";
-import Men from "../pages/men";
+import { PaymentPage } from "../pages/PaymentPage";
+import { AddressPage } from "../pages/AddressPage";
+import { WomensPage } from "../pages/womensPage";
+import { MensPage } from "../pages/MensPage";
 import Account from "../pages/Account";
 import CustomizedDialogs from "../components/Navbar/dialog";
-import { ProductDetails } from "../components/ProductDetails/ProductDetails";
-import { OfferNavbar } from "../components/subcomponents/OfferNavbar";
+import { Home } from "../pages/Home ";
+import { Singleproduct } from "../pages/Singleproduct";
+import { CartPage } from "../pages/CartPage";
 
 export const AllRoutes = () => {
    
     return (
         <div>
-            <OfferNavbar />
-            <Navbar />
-            <NavImg />
+           
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/cart" element={ <CartPage /> } />
-                <Route path="/cart/address/payment" element={ <Payment /> } />
-                <Route path="/cart/address" element={ <Address /> } />
-                <Route path="/womens" element={ <Women /> } />
-                <Route path="/mens" element={ <Men /> } />
+                <Route path="/cart/address/payment" element={ <PaymentPage /> } />
+                <Route path="/cart/address" element={ <AddressPage /> } />
+                <Route path="/womens" element={ <WomensPage /> } />
+                <Route path="/mens" element={ <MensPage /> } />
                 <Route path="/account" element={ <CustomizedDialogs ><Account />
                 </CustomizedDialogs> } />
-                <Route path="/products/:id" element={ <ProductDetails /> } />
+                <Route path="/products/:id" element={ <Singleproduct /> } />
 
             </Routes>
         </div>

@@ -1,3 +1,12 @@
+.paymentContainer{
+    margin-top: 6% ;
+    text-align: left; 
+}
+.paymentContainer>p:first-child{
+    padding-left: 6%;
+    font-size: 20px;
+    font-weight: 700;
+}
 .PaymentOptions{
     display: flex;
     align-items: center;
@@ -116,6 +125,7 @@
     width: 100px;
     background-color: #595959;
     border: transparent;
+    color: white;
 }
 .cardForm>div:nth-child(6)>input {
     width: 20px;
@@ -127,7 +137,8 @@
 }
 
 .billingAddTexts{
-    width: 100%;
-    justify-content: space-between;
+    width: 90%;
+    justify-content: space-around;
     display: flex;
+    margin: 10px 0;
 }
