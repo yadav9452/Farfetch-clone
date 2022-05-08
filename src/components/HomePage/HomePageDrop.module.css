@@ -1,9 +1,10 @@
 .containerDrop {
     width: 80%;
-    margin: 20px auto;
+    margin: 5% auto;
     display: flex;
     justify-content: space-between;
     text-align: left;
+    margin-bottom: 10%;
 }
 
 .containerDrop>div {

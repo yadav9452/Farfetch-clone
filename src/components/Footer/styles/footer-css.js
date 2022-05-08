@@ -29,11 +29,11 @@ export const Link = styled.div`
   font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
   margin-top: 10px;
   margin-left: 10px;
-  fontsize: 18px;
+  font-size: 18px;
   text-decoration: none;
   &:hover {
     cursor: pointer;
-    tansition: 200ms ease-in;
+    transition: 200ms ease-in;
   }
 `;
 export const Icon = styled.div`
@@ -42,7 +42,7 @@ export const Icon = styled.div`
 
   &:hover {
     cursor: pointer;
-    tansition: 200ms ease-in;
+    transition: 200ms ease-in;
   }
 `;
 export const Title = styled.div`
