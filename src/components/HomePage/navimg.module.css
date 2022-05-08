@@ -1,13 +1,14 @@
 .cardContainer{
     display: flex;
-    width: 8%;
-    text-align: left;
-    justify-content: left;
+    flex-direction: row;
+   width: 80%;
+   margin: auto;
+    justify-content: space-around; 
 }
 
 .card {
   width: 350px;
-  margin: 10px;  
+  margin:0;  
 }
 
 .card img {

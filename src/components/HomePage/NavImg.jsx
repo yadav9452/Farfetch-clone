@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import data from "./data";
-import styles from './card.module.css'
+import styles from './navimg.module.css'
 
 export const NavImg = () => {
     return (

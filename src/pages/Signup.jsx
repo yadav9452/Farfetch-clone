@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Signup = ({ handleChange }) => {
-  const paperStyle = { padding: 20, height: '45vh', width: 300, margin: "0 auto" };
+  const paperStyle = { padding: 20, height: '45vh', width: 300, margin: "0" , elevation: "0"};
   const btnstyle = { margin: '8px 0', backgroundColor: 'black', color: 'white' };
 
   const navigate = useNavigate();
@@ -47,16 +47,7 @@ const Signup = ({ handleChange }) => {
       alert("email should be unique");
     }
     
-
-   
-    // console.log("event", res);
-    // <Link href="#" onClick={ () => handleChange("event", 1) } >
-    //   Sign Up
-    // </Link>
   }
-    
-
-
   
 
   return (

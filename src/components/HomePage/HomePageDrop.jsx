@@ -1,72 +1,97 @@
-
-import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import './HomePageDrop.css';
+import * as React from "react";
+import styles from "./HomePageDrop.module.css";
 
 
-      
 
 export default function HomePageDrop() {
-  const [val, setval] = React.useState('8');
- 
-
-  const handleChange = (event) => {
-    setval(event.target.value);
-  };
-  
 
   return (
-    <div className='container-drop'>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 200 }}>
-        <InputLabel id="demo-simple-select-standard-label">Featured brands</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          value={val}
-          onChange={handleChange}
-          label="value"
-        >
-          <MenuItem value=" ">
-            {/* <em>None</em> */}
-          </MenuItem>
-          <MenuItem value={10}>Mens</MenuItem>
-          <MenuItem value={20}>Womens</MenuItem>
-          <MenuItem value={30}>Kids</MenuItem>
-        </Select>
-        
-      </FormControl>
+    <div className={styles.containerDrop}>
+      <div>
+        <p className={styles.title}>Featured brands</p>
+        <select name="" id="">
+          <option value="">MEN</option>
+          <option value="">Comme Des Garcons Play</option>
+          <option value="">Brunello Cucinelli</option>
+          <option value="">TOM FORD Eyewear</option>
+          <option value="">Thom Browne</option>
+          <option value="">visivim</option>
+          <option value="">Buscemi</option>
+          <option value="">Raf Simons</option>
+          <option value="">Axel Arigato</option>
+          <option value="">Greg Lauren</option>
+        </select>
+        <br />
+        <select name="" id="">
+          <option value="">WOMEN</option>
+          <option value="">Comme Des Garcons Play</option>
+          <option value="">Brunello Cucinelli</option>
+          <option value="">TOM FORD Eyewear</option>
+          <option value="">Thom Browne</option>
+          <option value="">visivim</option>
+          <option value="">Buscemi</option>
+          <option value="">Raf Simons</option>
+          <option value="">Axel Arigato</option>
+          <option value="">Greg Lauren</option>
+        </select>
+        <br />
+          <select name="" id="">
+            <option value="">KIDS</option>
+          <option value="">Comme Des Garcons Play</option>
+          <option value="">Brunello Cucinelli</option>
+          <option value="">TOM FORD Eyewear</option>
+          <option value="">Thom Browne</option>
+          <option value="">visivim</option>
+          <option value="">Buscemi</option>
+          <option value="">Raf Simons</option>
+          <option value="">Axel Arigato</option>
+          <option value="">Greg Lauren</option>
+        </select>
      
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 200 }}>
-        <InputLabel id="demo-simple-select-standard-label">Trending Now</InputLabel>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          value={val}
-          onChange={handleChange}
-          label="value"
-        >
-          <MenuItem value=" ">
-            {/* <em>None</em> */}
-          </MenuItem>
-          <MenuItem value={10}>Mens</MenuItem>
-          <MenuItem value={20}>Womens</MenuItem>
-          <MenuItem value={30}>Kids</MenuItem>
-        </Select>
-        
-      </FormControl>
-     
-  
+      </div>
 
-
-
- 
-   
+      <div>
+        <p className={ styles.title }>Trending now</p>
+      <select name="" id="">
+        <option value="">MEN</option>
+          <option value="">Comme Des Garcons Play</option>
+          <option value="">Brunello Cucinelli</option>
+          <option value="">TOM FORD Eyewear</option>
+          <option value="">Thom Browne</option>
+          <option value="">visivim</option>
+          <option value="">Buscemi</option>
+          <option value="">Raf Simons</option>
+          <option value="">Axel Arigato</option>
+          <option value="">Greg Lauren</option>
+      </select>
+      <br />
+        <select name="" id="">
+          <option value="">WOMEN</option>
+          <option value="">Comme Des Garcons Play</option>
+          <option value="">Brunello Cucinelli</option>
+          <option value="">TOM FORD Eyewear</option>
+          <option value="">Thom Browne</option>
+          <option value="">visivim</option>
+          <option value="">Buscemi</option>
+          <option value="">Raf Simons</option>
+          <option value="">Axel Arigato</option>
+          <option value="">Greg Lauren</option>
+        </select> 
+        <br />
+         <select name="" id="">
+          <option value="">KID</option>
+          <option value="">Comme Des Garcons Play</option>
+          <option value="">Brunello Cucinelli</option>
+          <option value="">TOM FORD Eyewear</option>
+          <option value="">Thom Browne</option>
+          <option value="">visivim</option>
+          <option value="">Buscemi</option>
+          <option value="">Raf Simons</option>
+          <option value="">Axel Arigato</option>
+          <option value="">Greg Lauren</option>
+        </select>
+      </div>
 
     </div>
   );
 }
-
-    

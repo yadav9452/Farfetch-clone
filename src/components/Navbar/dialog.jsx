@@ -35,9 +35,12 @@ const BootstrapDialogTitle = (props) => {
                     aria-label="close"
                     onClick={ onClose }
                     sx={ {
-                        position: 'absolute',
+                        
+                        position: 'relative',
                         right: 0,
-                        top: 10,
+                        top: 0,
+                        bottom : 0,
+                        left : 0,
                         color: (theme) => theme.palette.grey[ 500 ],
                     } }
                 >
@@ -55,10 +58,9 @@ BootstrapDialogTitle.propTypes = {
 
 export default function CustomizedDialogs({children}) {
     const [ open, setOpen ] = React.useState(true);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
+    // const handleClickOpen = () => {
+    //     setOpen(true);
+    // };
     const handleClose = () => {
         setOpen(!open);
     };
@@ -69,7 +71,7 @@ export default function CustomizedDialogs({children}) {
                 Open dialog
             </Button> */}
             <BootstrapDialog
-                onClose={ handleClose }
+                // onClose={ handleClose }
                 aria-labelledby="customized-dialog-title"
                 open={ open }
             >

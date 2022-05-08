@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Grid, Paper, OutlinedInput, TextField, Button, Typography, Link } from '@material-ui/core';
+import { Grid, Paper, TextField, Button, Typography, Link } from '@material-ui/core';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import { fontSize } from '@mui/system';
 import {useNavigate} from "react-router-dom"
-import { Home } from '@material-ui/icons';
 
 
 const Login = ({ handleChange }) => {
@@ -64,8 +62,8 @@ const Login = ({ handleChange }) => {
   
 
   return (
-    <Grid style={gridStyle}>
-      <Paper style={ paperStyle }>
+    <Grid  style={gridStyle}>
+      <Paper elevation={0} style={ paperStyle }>
         <form>
         <TextField label='Email address' placeholder='Enter email' fullWidth required onChange={ handleInput } id='email'/>
         <TextField label='Password' placeholder='Enter password' type='password' fullWidth required onChange={ handleInput } id='password'/>
