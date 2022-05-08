@@ -31,7 +31,7 @@ export const CartData = () => {
     const handleContinueShopping = () => {
         navigate("/products");
     };
-
+// const total_price = 0
     //total price
     const total_price = cartItems.reduce((acc, current) => {
         return acc + current.price;

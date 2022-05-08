@@ -51,7 +51,7 @@ const Login = ({ handleChange }) => {
 
     if(data.status === "ok"){
       alert("success");
-      // return navigate("/mens")
+      return navigate("/  ")
 
     } else {
       alert(data.error);

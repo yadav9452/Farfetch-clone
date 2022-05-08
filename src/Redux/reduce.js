@@ -1,4 +1,3 @@
-import { CartData } from "../components/Cart/Cart";
 import { CART, MENS_DATA, WOMENS_DATA, GET_ADDRESS, HANDLE_SINGLE_DATA, REMOVE_DATA_FROM_CART } from "./action";
 
 const initialState = {
@@ -38,7 +37,7 @@ export const reducer = (state = initialState, { type, payload }) => {
         case CART: {
             return {
                 ...state,
-                cart:  payload 
+                cart: [ ...state.cart, payload ]
             };
         }
       
@@ -53,7 +52,7 @@ export const reducer = (state = initialState, { type, payload }) => {
             console.log('remove',payload, state.cart)
             return {
                 ...state,
-                cart: state.cart.splice( payload,0)
+                cart: state.cart.splice( payload,state.cart.length-1)
                 // cart: [ ...state.cart ].splice(payload, 1)
             };
         }

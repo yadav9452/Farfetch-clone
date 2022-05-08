@@ -21,7 +21,6 @@
 
 .Navbox-left>div {
     width: 50%;
-    /* border: 1px solid red; */
 }
 
 .Navbox-left>div:nth-child(1) {
@@ -47,6 +46,6 @@
     margin: 0 10px;
 }
 
-.lock{
+.lock {
     margin: 0 10px;
 }
