@@ -35,29 +35,19 @@ const Signup = ({ handleChange }) => {
     if (formData.firstName === "" || formData.email === "" || formData.password === ""){
       return
     }
-    // console.log(formData);
-  // let  registerData = JSON.stringify(formData);
-    // const result = await fetch('http://localhost:2345/register',{
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(formData)
-    // })
-    // const data =await result.json()
+
     const {data} = await axios.post("https://farfetch-backend.herokuapp.com/register", formData)
     console.log(data)
     
     if (data.status === "ok") {
-      alert("success");
-      // window.location.href = "signin.html";
+      alert("Register Successfully");
+      navigate('/account#')
     } 
     else {
-        //  alert(data.error)
       alert("email should be unique");
     }
     
-    // navigate('/account#')
+
    
     // console.log("event", res);
     // <Link href="#" onClick={ () => handleChange("event", 1) } >

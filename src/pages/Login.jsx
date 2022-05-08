@@ -48,20 +48,17 @@ const Login = ({ handleChange }) => {
       body: loginData
     })
     const data = await result.json()
-    console.log(data)
+    console.log("logindata", data)
 
 
     if(data.status === "ok"){
-      return navigate("/mens")
+      alert("success");
+      // return navigate("/mens")
 
+    } else {
+      alert(data.error);
     }
-    // if (result.status === "ok") {
-    //   alert("success");
-    //   // window.location.href = "signin.html";
-    // } else {
-    //   //    alert(result.error())
-    //   alert(result.error);
-    // }
+    
   }
    
   

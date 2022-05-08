@@ -6,6 +6,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from 'react-router-dom';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogContent-root': {
@@ -17,10 +18,14 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 }));
 
 const BootstrapDialogTitle = (props) => {
+
+    const navigate = useNavigate()
+
     const { children, onClose, ...other } = props;
     const [state, setState] = React.useState(false)
     const onCloseButton = () => {
         setState(!state)
+        navigate('/')
     }
     return (
         <DialogTitle sx={ { m: 0, p: 2 } } { ...other }>

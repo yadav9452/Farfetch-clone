@@ -28,7 +28,9 @@ export const handleSingleData = (data) => (
     payload: data
 });
 
-export const getAddress = (data) => ({
+export const getAddress = (data) => (
+    console.log('getAdd', data),
+    {
     type: GET_ADDRESS,
     payload: data
 });
@@ -37,4 +39,14 @@ export const removeDataFromCart = (data) => ({
     type: REMOVE_DATA_FROM_CART,
     payload: data
 });
+
+export const fetchAddress = () => {
+    return (dispatch) => {
+        fetch("http://localhost:8080/address")
+            .then((response) => response.json())
+            .then((data) =>
+                dispatch(getAddress(data))
+            );
+    };
+}
 

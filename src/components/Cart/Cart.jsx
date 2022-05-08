@@ -21,6 +21,10 @@ export const CartData = () => {
     };
 
     const handleCheckoutCart = () => {
+        if(cartItems.length === 0){
+            alert("Please Add to Bag First");
+            return navigate("/");
+        }
         navigate("/cart/address");
     };
 
@@ -102,13 +106,13 @@ export const CartData = () => {
                     </div>
                     <div className={ styles.pymtDiv }>
                         <p>Delivery</p>
-                        <p>{ `$24.00` }</p>
+                        <p>{ total_price !== 24 ? `$24.0` : "00.00" }</p>
                     </div>
                     <hr />
                     <div className={ styles.pymtDiv }>
                         <p>Total</p>
                         <p>
-                            USD ${ total_price }.00
+                            USD ${ total_price == 24 ? `00` : total_price }.00
                             <br />
                             Import duties included
                         </p>

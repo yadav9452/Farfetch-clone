@@ -38,7 +38,7 @@ export const reducer = (state = initialState, { type, payload }) => {
         case CART: {
             return {
                 ...state,
-                cart: [ ...state.cart, payload ]
+                cart:  payload 
             };
         }
       
@@ -46,14 +46,14 @@ export const reducer = (state = initialState, { type, payload }) => {
             console.log("add", payload);
             return {
                 ...state,
-                address: payload
+                address: [...state.address,payload]
             };
         }
         case REMOVE_DATA_FROM_CART: {
             console.log('remove',payload, state.cart)
             return {
                 ...state,
-                cart: state.cart.splice( payload,1)
+                cart: state.cart.splice( payload,0)
                 // cart: [ ...state.cart ].splice(payload, 1)
             };
         }

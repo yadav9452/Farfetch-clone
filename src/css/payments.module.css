@@ -3,9 +3,9 @@
     text-align: left; 
 }
 .paymentContainer>p:first-child{
-    padding-left: 6%;
-    font-size: 20px;
-    font-weight: 700;
+    padding-left: 5%;
+    font-size: 24px;
+   margin:  3px;
 }
 .PaymentOptions{
     display: flex;
