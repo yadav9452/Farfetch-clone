@@ -18,7 +18,7 @@ https://youtu.be/PW8s7IUZ7ZE
 https://medium.com/@abhishek94.bhaskar/unit-5-construct-week-3de333e31528
 ## Tech Stack
 
-**Client:** React, Redux, Material UI
+**Client:** React, Redux, Material UI, CSS Modules, Styled-Components
 
 **Server:** Node, Express, MongoDb
 
